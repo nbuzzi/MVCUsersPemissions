@@ -1,0 +1,17 @@
+﻿@model MVCRouting.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using(Html.BeginForm("Login", "Home"))
+{
+    <p>Put your username:</p>
+    @Html.TextBoxFor(m => m.Name)
+    <p>Put your password</p>
+    @Html.PasswordFor(m => m.Password)
+
+    <button type="submit">Login!</button>
+}
